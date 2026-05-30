@@ -1,0 +1,378 @@
+.case-studies {
+  position: relative;
+  overflow: hidden;
+  height: 872px;
+  padding: 43.17px 0 0;
+  background: #000d12;
+}
+
+.case-studies::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 50% 47%, rgba(0, 180, 253, 0.12), transparent 33%),
+    linear-gradient(180deg, rgba(0, 13, 18, 0.88) 0%, #000d12 64%);
+  pointer-events: none;
+}
+
+.case-studies__inner {
+  position: relative;
+  z-index: 1;
+  width: min(1440px, 100%);
+  margin: 0 auto;
+}
+
+.case-studies h2 {
+  width: 463.26px;
+  height: 64px;
+  margin: 0 auto 82.83px;
+  color: #e9f4f9;
+  font-family: Archivo, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 53px;
+  font-weight: 400;
+  line-height: 120%;
+  text-align: center;
+  letter-spacing: -0.01em;
+}
+
+.case-studies__carousel {
+  position: relative;
+  width: min(1193.87px, 100%);
+  height: 513.3px;
+  margin: 0 auto;
+}
+
+.case-study-card {
+  border-radius: 18px;
+  background: #01141b;
+}
+
+.case-study-card--active {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 421.51px 480px;
+  gap: 65.49px;
+  align-items: center;
+  width: 1015px;
+  height: 438px;
+  margin: 0 auto;
+  padding: 25.5px 24px 31px;
+}
+
+.case-study-card--ghost {
+  position: absolute;
+  top: 72px;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 240px minmax(220px, 1fr);
+  gap: 42px;
+  align-items: center;
+  width: min(456px, 42vw);
+  min-height: 320px;
+  padding: 28px;
+  opacity: 0.28;
+  filter: saturate(0.7);
+}
+
+.case-study-card--previous {
+  left: -58px;
+  transform: translateX(-22%);
+}
+
+.case-study-card--next {
+  right: -58px;
+  transform: translateX(22%);
+}
+
+.case-study-card--ghost img {
+  width: 240px;
+  aspect-ratio: 1;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.case-study-card--ghost p {
+  margin: 0 0 20px;
+  color: #00b4fd;
+  font-family: "Chivo Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 130%;
+}
+
+.case-study-card--ghost h3 {
+  margin: 0;
+  color: #e9f4f9;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 120%;
+}
+
+.case-study-card__image {
+  width: 421.51px;
+  height: 381.5px;
+  border-radius: 11.43px;
+  object-fit: cover;
+}
+
+.case-study-card__content {
+  display: flex;
+  width: 480px;
+  min-height: 245.01px;
+  min-width: 0;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.case-study-card__kicker {
+  margin: 0;
+  color: #00b4fd;
+  font-family: "Chivo Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 130%;
+  letter-spacing: 0.04em;
+}
+
+.case-study-card h3 {
+  width: 422.56px;
+  min-height: 156px;
+  margin: 0;
+  color: #e9f4f9;
+  font-family: Archivo, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 43px;
+  font-weight: 400;
+  line-height: 120%;
+  letter-spacing: 0;
+}
+
+.case-study-card__company {
+  display: inline-flex;
+  width: 124.51px;
+  min-height: 30.01px;
+  gap: 7.5px;
+  align-items: center;
+  margin: 0 0 38.99px;
+  color: rgba(123, 143, 160, 0.86);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 130%;
+}
+
+.case-study-card__company svg {
+  width: 30px;
+  height: 30px;
+  padding: 6.67px;
+  color: #001923;
+  background: rgba(123, 143, 160, 0.86);
+  border-radius: 50%;
+}
+
+.case-study-card__button {
+  width: 431px;
+  min-height: 36px;
+  padding: 10px 183px;
+  color: rgba(233, 244, 249, 0.5);
+  font-size: 12px;
+  border: 1px solid rgba(233, 244, 249, 0.5);
+  border-radius: 10px;
+}
+
+.case-studies__footer {
+  position: absolute;
+  top: 471.3px;
+  left: 475.34px;
+  z-index: 3;
+  display: block;
+  width: 243.19px;
+  height: 42px;
+  margin: 0;
+}
+
+.case-studies__controls {
+  display: flex;
+  width: 243.19px;
+  height: 42px;
+  gap: 31px;
+  align-items: center;
+  justify-content: center;
+}
+
+.case-studies__arrow {
+  display: inline-flex;
+  flex: 0 0 42px;
+  width: 42px;
+  height: 42px;
+  align-items: center;
+  justify-content: center;
+  color: #00b4fd;
+  border: 2px solid #00b4fd;
+  border-radius: 50%;
+  transition:
+    color var(--transition-fast),
+    background var(--transition-fast);
+}
+
+.case-studies__arrow svg {
+  width: 20.94px;
+  height: 20.94px;
+}
+
+.case-studies__arrow:hover {
+  color: #001013;
+  background: #00b4fd;
+}
+
+.case-studies__dots {
+  display: flex;
+  gap: 7.73px;
+  align-items: center;
+  justify-content: center;
+  width: 97.19px;
+  height: 12px;
+}
+
+.case-studies__dot {
+  flex: 0 0 auto;
+  width: 11.91px;
+  height: 11.91px;
+  border: 1px solid #0b4b63;
+  border-radius: 999px;
+}
+
+.case-studies__dot--active {
+  width: 38.01px;
+  height: 11.91px;
+  background: #0b4b63;
+  border-color: #0b4b63;
+  border-radius: 6.01px;
+}
+
+.case-studies__all {
+  position: absolute;
+  top: 481.8px;
+  left: 1017.86px;
+  z-index: 3;
+  display: inline-flex;
+  height: 18px;
+  gap: 5px;
+  align-items: center;
+  justify-content: flex-start;
+  color: #00b4fd;
+  font-family: "Chivo Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 130%;
+  letter-spacing: 0;
+  text-align: right;
+  text-decoration: underline;
+  text-underline-offset: 9px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1100px) {
+  .case-studies {
+    height: auto;
+    min-height: auto;
+    padding: 72px var(--container-padding) 64px;
+  }
+
+  .case-studies h2 {
+    width: auto;
+    height: auto;
+    margin-bottom: 56px;
+    font-size: clamp(48px, 7vw, 53px);
+  }
+
+  .case-studies__carousel {
+    width: 100%;
+    height: auto;
+  }
+
+  .case-study-card--active {
+    grid-template-columns: minmax(260px, 0.8fr) minmax(320px, 1fr);
+    gap: 40px;
+    width: 100%;
+    height: auto;
+    min-height: 438px;
+  }
+
+  .case-study-card--ghost {
+    display: none;
+  }
+}
+
+@media (max-width: 820px) {
+  .case-studies {
+    padding: 72px 1rem 56px;
+  }
+
+  .case-study-card--active {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 24px 16px 30px;
+  }
+
+  .case-study-card__image {
+    width: 100%;
+    height: auto;
+    max-width: none;
+    aspect-ratio: 421.51 / 381.5;
+  }
+
+  .case-study-card__content,
+  .case-study-card h3,
+  .case-study-card__button {
+    width: 100%;
+  }
+
+  .case-study-card h3 {
+    max-width: none;
+    font-size: clamp(32px, 10vw, 46px);
+  }
+
+  .case-study-card__company {
+    margin: 28px 0 36px;
+    font-size: 20px;
+  }
+
+  .case-study-card__button {
+    padding-inline: 1.5rem;
+  }
+
+  .case-studies__footer {
+    position: static;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 28px;
+    margin-top: 36px;
+  }
+
+  .case-studies__controls,
+  .case-studies__all {
+    position: static;
+  }
+
+  .case-studies__all {
+    justify-self: center;
+  }
+}
+
+@media (max-width: 520px) {
+  .case-studies h2 {
+    font-size: clamp(38px, 13vw, 52px);
+  }
+
+  .case-studies__controls {
+    gap: 18px;
+  }
+
+  .case-studies__arrow {
+    width: 48px;
+    height: 48px;
+  }
+}
