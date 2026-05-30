@@ -37,7 +37,7 @@ const CoreBanking = () => {
   return (
     <section className="core" id="core-banking">
       <div className="core__hero">
-        <img src={coreCb7Bg} alt="" className="core__hero-bg" aria-hidden="true" />
+        <img src={coreCb7Bg} alt="" className="core__hero-bg" aria-hidden="true" loading="lazy" decoding="async" />
         <div className="core__content">
           <h2>A complete cloud-based<br />core banking.</h2>
           <p>Faster time to market with our cloud-based core banking services</p>
@@ -47,13 +47,13 @@ const CoreBanking = () => {
           </div>
         </div>
         <figure className="core__image core__image--right">
-          <img src={coreAmlFrame} alt="AML dashboard interface" />
+          <img src={coreAmlFrame} alt="AML dashboard interface" loading="lazy" decoding="async" />
         </figure>
       </div>
 
       <div className="core__details">
         <figure className="core__image core__image--left">
-          <img src={coreKycFrame} alt="KYC dashboard interface" />
+          <img src={coreKycFrame} alt="KYC dashboard interface" loading="lazy" decoding="async" />
         </figure>
 
         <div className="core__copy">

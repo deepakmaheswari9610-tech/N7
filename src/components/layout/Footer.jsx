@@ -17,13 +17,13 @@ const bankingLinks = ['About Us', 'Solutions', 'Contact', 'Company', 'Careers', 
 const locationColumns = [
   {
     city: 'London',
-    address: 'Linktia Infosystems Ltd – CB7, 26 Main Road Sundridge,TN14 6EP, England, United Kingdom.',
+    address: 'Linktia Infosystems Ltd - CB7, 26 Main Road Sundridge, TN14 6EP, England, United Kingdom.',
     title: 'Solutions',
     links: solutions.map((label) => ({ label, href: '#solutions' })),
   },
   {
     city: 'Dubai',
-    address: 'Linktia Infosystems Ltd – CB7,Jumeirah Business, Center 5 Cluster W, Jumeirah Lakes Towers, Dubai, United Arab Emirates',
+    address: 'Linktia Infosystems Ltd - CB7, Jumeirah Business Center 5, Cluster W, Jumeirah Lakes Towers, Dubai, United Arab Emirates.',
     title: 'N7 Banking',
     links: bankingLinks.map((label) => ({
       label,
@@ -31,8 +31,8 @@ const locationColumns = [
     })),
   },
   {
-    city: 'London',
-    address: 'Linktia Infosystems Ltd – CB7,Nirmal, Anand Nagar, Suncity Road, Pune, Maharashtra, 411041, India',
+    city: 'Pune',
+    address: 'Linktia Infosystems Ltd - CB7, Nirmal, Anand Nagar, Suncity Road, Pune, Maharashtra, 411041, India.',
     title: 'Our Socials',
     links: [
       { label: 'LinkedIn', href: '#linkedin' },
@@ -44,10 +44,10 @@ const locationColumns = [
 const Footer = () => {
   return (
     <footer className="footer" id="contact">
-      <img src={footerEllipse} alt="" className="footer__ellipse" aria-hidden="true" />
+      <img src={footerEllipse} alt="" className="footer__ellipse" aria-hidden="true" loading="lazy" decoding="async" />
       <div className="footer__inner">
         <a href="#home" className="footer__logo" aria-label="N7 home">
-          <img src={footerLogo} alt="N7" />
+          <img src={footerLogo} alt="N7" loading="lazy" decoding="async" />
         </a>
 
         <div className="footer__content" id="company">
@@ -61,7 +61,10 @@ const Footer = () => {
               <div className="footer__link-group">
                 <h3>{column.title}</h3>
                 {column.links.map((item) => (
-                  <a key={item.label} href={item.href}>{item.label}<ArrowRight size={15} /></a>
+                  <a key={item.label} href={item.href}>
+                    {item.label}
+                    <ArrowRight size={15} />
+                  </a>
                 ))}
               </div>
             </div>
@@ -69,7 +72,7 @@ const Footer = () => {
         </div>
 
         <p className="footer__copy">
-          Copyright © 2022 by Linktia Infosystems Limited — [CB7 and N7 as Commercial Brand] — [Registered under the Companies Act 2006 in England and Wales | Number of Incorporation 13100992]
+          Copyright (c) 2022 by Linktia Infosystems Limited - [CB7 and N7 as Commercial Brand] - [Registered under the Companies Act 2006 in England and Wales | Number of Incorporation 13100992]
         </p>
       </div>
     </footer>

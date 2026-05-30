@@ -98,7 +98,13 @@ const Navbar = () => {
 
           <div className="navbar__actions">
             <a href="#demo" className="btn btn-outline navbar__cta">REQUEST DEMO</a>
-            <button className="navbar__hamburger" onClick={() => setMobileOpen(!mobileOpen)}>
+            <button
+              className="navbar__hamburger"
+              type="button"
+              aria-label={mobileOpen ? 'Close navigation menu' : 'Open navigation menu'}
+              aria-expanded={mobileOpen}
+              onClick={() => setMobileOpen(!mobileOpen)}
+            >
               {mobileOpen ? <X size={22} /> : <Menu size={22} />}
             </button>
           </div>
@@ -126,7 +132,7 @@ const Navbar = () => {
           <div className="navbar__mobile-section">
             <a href="#about" className="navbar__mobile-link" onClick={() => setMobileOpen(false)}>ABOUT US</a>
           </div>
-          <a href="#demo" className="btn btn-primary" style={{ marginTop: '1rem', width: '100%' }} onClick={() => setMobileOpen(false)}>
+          <a href="#demo" className="btn btn-primary navbar__mobile-cta" onClick={() => setMobileOpen(false)}>
             REQUEST DEMO
           </a>
         </div>

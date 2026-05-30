@@ -1,4 +1,5 @@
 import { ArrowRight } from 'lucide-react';
+import cardArt from '../../assets/images/insights-card-frame.png';
 import '../../styles/sections/insights.css';
 
 const insights = [
@@ -6,11 +7,7 @@ const insights = [
     title: 'How to transition from a traditional to a digital bank',
     author: 'David Grohl',
     date: '17/08/24',
-  },
-  {
-    title: 'How to transition from a traditional to a digital bank',
-    author: 'David Grohl',
-    date: '17/08/24',
+    featured: true,
   },
   {
     title: 'How to transition from a traditional to a digital bank',
@@ -35,7 +32,13 @@ const Insights = () => {
 
         <div className="insights__cards">
           {insights.map((item, index) => (
-            <article key={`${item.title}-${index}`} className="insight-card">
+            <article
+              key={`${item.title}-${index}`}
+              className={`insight-card ${item.featured ? 'insight-card--featured' : ''}`}
+            >
+              {item.featured && (
+                <img src={cardArt} alt="" className="insight-card__art" aria-hidden="true" loading="lazy" decoding="async" />
+              )}
               <div className="insight-card__body">
                 <p className="insight-card__kicker">GETTING STARTED</p>
                 <h3>{item.title}</h3>

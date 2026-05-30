@@ -60,7 +60,7 @@ const Solutions = () => {
           {solutions.map((solution) => (
             <article key={solution.title} id={solution.id} className="solutions__card">
               <div className="solutions__card-top">
-                <img src={solution.icon} alt="" className="solutions__icon" aria-hidden="true" />
+                <img src={solution.icon} alt="" className="solutions__icon" aria-hidden="true" loading="lazy" decoding="async" />
                 {solution.kicker && <span className="solutions__kicker">{solution.kicker}</span>}
               </div>
               <div className="solutions__card-copy">

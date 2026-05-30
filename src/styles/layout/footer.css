@@ -172,9 +172,11 @@
     gap: 34px;
   }
 
-  .footer__copy {
+  .footer .footer__copy {
     position: static;
     grid-area: copy;
+    width: 100%;
+    max-width: none;
   }
 }
 

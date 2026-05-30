@@ -188,6 +188,11 @@
   color: var(--color-text-secondary);
 }
 
+.navbar__mobile-cta {
+  width: 100%;
+  margin-top: 1rem;
+}
+
 @media (max-width: 900px) {
   .navbar {
     top: 14px;
@@ -198,11 +203,27 @@
 
   .navbar__inner {
     width: calc(100% - 2rem);
+    justify-content: space-between;
+    gap: 1rem;
   }
 
   .navbar__links,
   .navbar__cta {
     display: none;
+  }
+
+  .navbar__content {
+    width: auto;
+    height: auto;
+    flex: 0 1 auto;
+    justify-content: flex-end;
+    gap: 0;
+  }
+
+  .navbar__actions {
+    width: auto;
+    height: auto;
+    flex: 0 0 auto;
   }
 
   .navbar__hamburger,

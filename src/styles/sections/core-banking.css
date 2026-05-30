@@ -84,6 +84,24 @@
   opacity: 0.8;
 }
 
+.core__watermark,
+.digital__watermark {
+  position: absolute;
+  z-index: 0;
+  color: transparent;
+  -webkit-text-stroke: 1.59px rgba(0, 180, 253, 0.5);
+  font-family: Archivo, Inter, system-ui, sans-serif;
+  font-size: 572.63px;
+  font-weight: 500;
+  line-height: 120%;
+  letter-spacing: 0;
+  pointer-events: none;
+}
+
+.core__watermark {
+  display: none;
+}
+
 .core__actions {
   position: relative;
   z-index: 1;

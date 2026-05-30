@@ -33,12 +33,18 @@ const CaseStudies = () => {
   const nextIndex = (activeIndex + 1) % caseStudies.length;
   const activeCase = caseStudies[activeIndex];
 
-  const goToPrevious = () => {
-    setActiveIndex(previousIndex);
+  const showCaseStudy = (index) => {
+    setActiveIndex(index);
   };
 
-  const goToNext = () => {
-    setActiveIndex(nextIndex);
+  const goToPrevious = (event) => {
+    event.currentTarget.blur();
+    showCaseStudy(previousIndex);
+  };
+
+  const goToNext = (event) => {
+    event.currentTarget.blur();
+    showCaseStudy(nextIndex);
   };
 
   return (
@@ -47,13 +53,14 @@ const CaseStudies = () => {
         <h2>Our Case Studies</h2>
 
         <div className="case-studies__carousel" aria-live="polite">
+          <div className="case-studies__stage">
           {[previousIndex, nextIndex].map((index, position) => (
             <article
               className={`case-study-card case-study-card--ghost case-study-card--${position === 0 ? 'previous' : 'next'}`}
               aria-hidden="true"
-              key={caseStudies[index].title}
+              key={`${position}-${caseStudies[index].title}-${activeIndex}`}
             >
-              <img src={caseStudyArt} alt="" aria-hidden="true" />
+              <img src={caseStudyArt} alt="" aria-hidden="true" loading="lazy" decoding="async" />
               <div>
                 <p>{caseStudies[index].category}</p>
                 <h3>{caseStudies[index].title}</h3>
@@ -61,8 +68,8 @@ const CaseStudies = () => {
             </article>
           ))}
 
-          <article className="case-study-card case-study-card--active">
-            <img src={caseStudyArt} alt="" className="case-study-card__image" aria-hidden="true" />
+          <article className="case-study-card case-study-card--active" key={activeCase.title}>
+            <img src={caseStudyArt} alt="" className="case-study-card__image" aria-hidden="true" loading="lazy" decoding="async" />
             <div className="case-study-card__content">
               <p className="case-study-card__kicker">{activeCase.category}</p>
               <h3>{activeCase.title}</h3>
@@ -70,6 +77,7 @@ const CaseStudies = () => {
               <a href="#case-studies" className="btn btn-outline case-study-card__button">READ MORE</a>
             </div>
           </article>
+          </div>
 
           <div className="case-studies__footer">
             <div className="case-studies__controls" aria-label="Case study carousel controls">
@@ -82,7 +90,7 @@ const CaseStudies = () => {
                   <button
                     type="button"
                     className={`case-studies__dot ${index === activeIndex ? 'case-studies__dot--active' : ''}`}
-                    onClick={() => setActiveIndex(index)}
+                    onClick={() => showCaseStudy(index)}
                     aria-label={`Show ${item.company} case study`}
                     aria-current={index === activeIndex}
                     key={item.company}

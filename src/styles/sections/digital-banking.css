@@ -46,7 +46,7 @@
   color: #000d12;
 }
 
-.digital__intro2-copy{
+.digital__intro-text {
   display: grid;
   gap: 16px;
 }
@@ -158,11 +158,11 @@
   z-index: 1;
   display: grid;
   width: min(651.7056px, calc(100% - 622px));
-  min-height: 1848.7001px;
-  gap: 110px;
+  min-height: 1518px;
+  gap: 24px;
   margin-top: -330px;
   margin-left: 622px;
-  padding: 100px 0 var(--section-y-sm);
+  padding: 100px 0 28px;
 }
 
 .digital__block {
@@ -266,13 +266,13 @@
 
 .paperless-panel--digital {
   width: 100vw;
-  height: 681px;
+  height: 542px;
   margin: 0 0 0 calc(50% - 50vw);
   background: #e9f4f9;
 }
 
 .paperless-panel--digital::before {
-  top: var(--digital-panel-card-top);
+  top: 78px;
   left: var(--digital-panel-card-left);
   width: var(--digital-panel-card-width);
   height: 427px;
@@ -281,7 +281,7 @@
 }
 
 .paperless-panel--digital::after {
-  top: calc(var(--digital-panel-card-top) - 160.72px);
+  top: -82px;
   left: calc(var(--digital-panel-card-left) + 620.56px);
   width: 660px;
   height: 730px;
@@ -292,7 +292,7 @@
 }
 
 .paperless-panel--digital .paperless-panel__copy {
-  top: calc(var(--digital-panel-card-top) + 112.28px);
+  top: 190px;
   left: calc(var(--digital-panel-card-left) + 65px);
   display: grid;
   width: 607.83px;
@@ -320,7 +320,7 @@
 }
 
 .paperless-panel--digital .paperless-panel__actions {
-  top: calc(var(--digital-panel-card-top) + 189px);
+  top: 267px;
   left: calc(var(--digital-panel-card-left) + 757px);
   width: 458px;
   height: 49px;
@@ -333,7 +333,7 @@
   min-height: 49px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1080px) {
   .digital__intro,
   .digital__block,
   .digital__block--2 {
@@ -344,6 +344,11 @@
     min-height: auto;
     padding-top: var(--section-y-sm);
     padding-bottom: 3rem;
+  }
+
+  .digital__seven-bg,
+  .digital__vector-bg {
+    display: none;
   }
 
   .digital__watermark {
@@ -453,6 +458,11 @@
   .digital__actions {
     flex-direction: column;
     align-items: stretch;
+  }
+
+  .digital__actions .btn-primary,
+  .digital__actions .link-arrow {
+    width: 100%;
   }
 
   .digital__phone-wrap img {

@@ -31,15 +31,15 @@ const digitalBlocks = [
 const DigitalBanking = () => {
   return (
     <section className="digital" id="digital-banking">
-      <img src={vectorImage} alt="" className="digital__vector-bg" aria-hidden="true" />
-      <img src={sevenImage} alt="" className="digital__seven-bg" aria-hidden="true" />
+      <img src={vectorImage} alt="" className="digital__vector-bg" aria-hidden="true" loading="lazy" decoding="async" />
+      <img src={sevenImage} alt="" className="digital__seven-bg" aria-hidden="true" loading="lazy" decoding="async" />
       <div className="container">
         <div className="digital__intro">
-          <img src={n7Image} alt="" className="digital__watermark" aria-hidden="true" />
+          <img src={n7Image} alt="" className="digital__watermark" aria-hidden="true" loading="lazy" decoding="async" />
           <div className="digital__intro-copy">
-            <div className="digital__intro2-copy">
-            <h2>Digital banking<br />out-of-the-box</h2>
-            <p>N7 helps your financial institution improve the client experience, automate and optimize procedures</p>
+            <div className="digital__intro-text">
+              <h2>Digital banking<br />out-of-the-box</h2>
+              <p>N7 helps your financial institution improve the client experience, automate and optimize procedures</p>
             </div>
             <div className="digital__actions">
               <a href="#demo" className="btn btn-primary">REQUEST DEMO</a>
@@ -55,7 +55,7 @@ const DigitalBanking = () => {
           {digitalBlocks.map((block, index) => (
             <article key={block.title} className={`digital__block digital__block--${index + 1}`}>
               <div className="digital__phone-wrap">
-                <img src={block.image} alt={`${block.title} mobile banking screen`} />
+                <img src={block.image} alt={`${block.title} mobile banking screen`} loading="lazy" decoding="async" />
               </div>
               <div className="digital__copy">
                 <div className="digital__copy-text">
@@ -85,7 +85,7 @@ const DigitalBanking = () => {
             <a href="#demo" className="btn btn-primary">REQUEST DEMO</a>
           </div>
         </div>
-      </div>  
+      </div>
     </section>
   );
 };

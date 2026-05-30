@@ -2,19 +2,19 @@
   position: relative;
   overflow: hidden;
   min-height: 852px;
-  padding: 80px 0 64px;
+  padding: 80px 0 60px;
   background: #000d12;
 }
 
 .insights::before {
   content: "";
   position: absolute;
-  left: -244px;
-  bottom: -174px;
-  width: 844px;
-  height: 844px;
-  background: url('../../assets/images/insights-glow.png') center / contain no-repeat;
-  opacity: 0.54;
+  left: -286px;
+  top: 255px;
+  width: 760px;
+  height: 760px;
+  background: url('../../assets/images/insights-ellipse.png') center / contain no-repeat;
+  opacity: 0.38;
   pointer-events: none;
 }
 
@@ -27,6 +27,7 @@
   align-items: start;
   width: min(1280px, 100%);
   margin: 0 auto;
+  padding: 0;
 }
 
 .insights__intro {
@@ -55,17 +56,51 @@
   display: grid;
   width: 670px;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 29px;
+  gap: 34px 30px;
 }
 
 .insight-card {
+  position: relative;
+  overflow: hidden;
   width: 100%;
-  height: 318px;
+  min-height: 317px;
   display: flex;
   flex-direction: column;
-  padding: 38px 30.72px 30px;
+  padding: 39px 30px 30px;
   border-radius: 16px;
-  background: rgba(0, 28, 34, 0.82);
+  background: rgba(0, 28, 34, 0.78);
+  transition:
+    transform var(--transition-base),
+    background var(--transition-base),
+    box-shadow var(--transition-base);
+}
+
+.insight-card:hover {
+  background: rgba(0, 34, 42, 0.95);
+  box-shadow: 0 24px 70px rgba(0, 180, 253, 0.12);
+  transform: translateY(-8px);
+}
+
+.insight-card--featured {
+  grid-column: 1 / -1;
+  min-height: 317px;
+  display: grid;
+  grid-template-columns: 295px 1fr;
+  gap: 33px;
+  align-items: center;
+  padding: 25px 30px 25px 24px;
+}
+
+.insight-card__art {
+  width: 295px;
+  height: 268px;
+  border-radius: 8px;
+  object-fit: cover;
+  transition: transform var(--transition-base);
+}
+
+.insight-card--featured:hover .insight-card__art {
+  transform: scale(1.025);
 }
 
 .insight-card__body {
@@ -77,6 +112,11 @@
   flex-direction: column;
   gap: 11px;
   align-items: flex-start;
+}
+
+.insight-card--featured .insight-card__body {
+  min-height: 236px;
+  padding: 18px 0 11px;
 }
 
 .insight-card__kicker {
@@ -93,8 +133,8 @@
 }
 
 .insight-card h3 {
-  width: 259.06px;
-  height: 96px;
+  width: 259px;
+  min-height: 96px;
   margin: 0;
   color: #e9f4f9;
   font-family: Archivo, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -102,6 +142,11 @@
   font-weight: 400;
   line-height: 120%;
   letter-spacing: 0;
+}
+
+.insight-card--featured h3 {
+  width: min(100%, 286px);
+  min-height: 87px;
 }
 
 .insight-card__meta {
@@ -129,6 +174,10 @@
   font-size: 12px;
 }
 
+.insight-card--featured .insight-card__btn {
+  margin-top: auto;
+}
+
 .insights__all {
   grid-column: 1 / -1;
   justify-self: end;
@@ -151,6 +200,10 @@
     gap: 48px;
   }
 
+  .insights__cards {
+    width: 100%;
+  }
+
   .insights__intro h2 {
     max-width: 620px;
   }
@@ -162,11 +215,11 @@
   }
 
   .insights::before {
-    left: -360px;
-    bottom: 48px;
-    width: 680px;
-    height: 680px;
-    opacity: 0.36;
+    left: -340px;
+    top: 190px;
+    width: 640px;
+    height: 640px;
+    opacity: 0.32;
   }
 
   .insights__cards,
@@ -176,6 +229,28 @@
 
   .insights__cards {
     grid-template-columns: 1fr;
+  }
+
+  .insight-card,
+  .insight-card--featured {
+    min-height: auto;
+    display: flex;
+    padding: 28px 24px 24px;
+  }
+
+  .insight-card--featured {
+    gap: 24px;
+  }
+
+  .insight-card__art {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 295 / 268;
+  }
+
+  .insight-card--featured .insight-card__body {
+    min-height: auto;
+    padding: 0;
   }
 
   .insight-card__body,
